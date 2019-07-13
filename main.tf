@@ -5,7 +5,7 @@ resource "aws_lambda_function" "asg-lambda-stop-start" {
   handler          = "asg-lambda-stop-start.handler"
   timeout          = "5"
   runtime          = "python2.7"
-  source_code_hash = "${base64sha256(file("../functions/asg-lambda-stop-start.zip"))}"
+  source_code_hash = "${base64sha256(file("functions/asg-lambda-stop-start.zip"))}"
 }
 
 resource "aws_iam_role" "LambdaASGManagement" {

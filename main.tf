@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "asg-lambda-stop-start" {
-  filename         = "../functions/asg-lambda-stop-start.zip"
+  filename         = "functions/asg-lambda-stop-start.zip"
   function_name    = "asg-lambda-stop-start"
   role             = "${aws_iam_role.LambdaASGManagement.arn}"
   handler          = "asg-lambda-stop-start.handler"
